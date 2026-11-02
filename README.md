@@ -1,28 +1,32 @@
-# GridGuard — Demo Hub
+# GridGuard — demo hub
 
-A small launcher for the GridGuard AI demo views: control room, technician, resident,
-simulation, and hardware.
+A small launcher for the GridGuard AI demo views: control room, utility view,
+technician check-in, resident outage status and a single-transformer simulator.
 
-**This is a supporting repo.** The main project, with the full write-up and the complete
-demo, lives here:
+**The full project is [gridguard](https://github.com/dominicnkutha1-netize/gridguard)** —
+this repository is a supporting set of pages, not the main one.
 
-### → [dominicnkutha1-netize/Eskomgrid](https://github.com/dominicnkutha1-netize/Eskomgrid)
-
-## What's here
+## What is here
 
 | Path | View |
 |---|---|
+| `index.html` | Launcher (this page) |
 | `controlroom/` | Operator fleet overview |
 | `eskom/` | Utility-level view |
 | `resident/` | Household outage status |
 | `key/` | RFID technician check-in |
 | `transformer/` | Single transformer unit |
-| `hub/` | This launcher page |
 
-Shared logic is in `gg-engine.js`.
+## Running it
 
-## Running
+No build step. Open `index.html`, or serve the folder:
 
-No build step. Clone it, open `index.html`, and click through.
+```bash
+python -m http.server 8000
+```
 
-> ⚠️ Prototype. Telemetry is simulated; nothing connects to real hardware or to Eskom.
+## Status
+
+Prototype. All telemetry is simulated in JavaScript; nothing connects to real
+hardware or to a utility. Superseded by
+[gridguard](https://github.com/dominicnkutha1-netize/gridguard).
